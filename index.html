@@ -8,13 +8,12 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Mesto</title>
-    <script type="module" crossorigin src="./assets/index-CGg5YqMm.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-3G1dibfu.css">
+    <script type="module" crossorigin src="./assets/index-Av44PXDI.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Bg5X17rm.css">
   </head>
   <body class="page">
     <div class="page__content">
       <header class="header page__section">
-        <!-- Логотип — по клику открывает попап статистики -->
         <img
           src="./assets/logo-C_QQpFK1.svg"
           alt="Логотип проекта местооооо"
@@ -24,7 +23,6 @@
       </header>
       <main class="content">
         <section class="profile page__section">
-          <!-- Аватар — имя и описание убраны: данные теперь приходят с сервера -->
           <div
             class="profile__image"
             style="background-image: url('')"
@@ -187,15 +185,14 @@
 
       <!-- Попап статистики пользователей (открывается по клику на логотип) -->
       <div class="popup popup_type_info">
-        <div class="popup__content">
+        <div class="popup__content popup__content_content_info">
           <button type="button" class="popup__close"></button>
-          <h3 class="popup__title">Статистика</h3>
-          <h4 class="popup__subtitle">Топ авторов</h4>
-          <ul class="popup-info__users"></ul>
-          <dl class="popup-info__stats"></dl>
+          <h3 class="popup__title">Статистика пользователей</h3>
+          <dl class="popup__info popup-info__stats"></dl>
+          <h4 class="popup__subtitle">Все пользователи:</h4>
+          <ul class="popup__list popup-info__users"></ul>
         </div>
       </div>
-    </div>
 
 
     <!-- Шаблон карточки -->
@@ -209,7 +206,6 @@
           <h2 class="card__title"></h2>
           <div class="card__likes">
             <button type="button" class="card__like-button"></button>
-            <!-- Счётчик лайков -->
             <span class="card__like-count">0</span>
           </div>
         </div>
@@ -218,20 +214,16 @@
 
     <!-- Шаблон строки статистики: «Ключ: Значение» -->
     <template id="popup-info-definition-template">
-      <div class="popup-info__item">
-        <dt class="popup-info__term"></dt>
-        <dd class="popup-info__definition"></dd>
+      <div class="popup__info-item popup-info__item">
+        <dt class="popup__info-term popup-info__term"></dt>
+        <dd class="popup__info-description popup-info__definition"></dd>
       </div>
     </template>
 
     <!-- Шаблон карточки пользователя в списке статистики -->
     <template id="popup-info-user-preview-template">
-      <li class="popup-info__user">
-        <img class="popup-info__user-avatar" src="" alt="" />
-        <div class="popup-info__user-info">
-          <p class="popup-info__user-name"></p>
-          <p class="popup-info__user-card-count"></p>
-        </div>
+      <li class="popup__list-item popup-info__user">
+        <p class="popup__info-term popup-info__user-name"></p>
       </li>
     </template>
   </body>
